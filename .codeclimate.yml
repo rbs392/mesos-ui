@@ -4,8 +4,6 @@ engines:
    enabled: true
  eslint:
    enabled: true
- fixme:
-   enabled: true (edited)
 
 exclude_paths:
 - src/public/css/flexboxgrid.min.css
