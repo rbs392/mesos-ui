@@ -45,6 +45,7 @@
     "superagent": "1.4.0",
     "history": "1.12.0",
     "envify": "3.4.0",
+    "express-http-proxy": "0.6.0",
     "transform-loader": "0.2.3"
   },
   "devDependencies": {
