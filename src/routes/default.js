@@ -28,12 +28,14 @@ module.exports = function(app) {
       let data = { title: '', description: '', css: '', body: '' };
       let css = [];
       Router.run(routes, req.url, function(Handler) {
-        let application = (<Handler
-          context={{
-            onInsertCss: value => css.push(value),
-            onSetTitle: value => data.title = value,
-            onSetMeta: (key, value) => data[key] = value
-          }} />
+        let application = (
+          <Handler
+            context={{
+              onInsertCss: value => css.push(value),
+              onSetTitle: value => data.title = value,
+              onSetMeta: (key, value) => data[key] = value
+            }}
+          />
         );
         data.body = React.renderToString(application);
         data.css = css.join('');
